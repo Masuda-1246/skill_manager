@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { ThemeProvider} from '@mui/material/styles';
 import theme from './theme'
 import Link from 'next/Link'
+import Divider from '@mui/material/Divider';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -47,18 +48,21 @@ export default function TemporaryDrawer() {
             </ListItemButton>
           </ListItem>
         </Link>
+        <Divider />
         <ListItem key='Contact' disablePadding>
-            <ListItemButton>
-              <ListItemIcon><MailIcon /></ListItemIcon>
-              <ListItemText primary='Contact' />
-            </ListItemButton>
-          </ListItem>
-          <ListItem key='About me' disablePadding>
-            <ListItemButton>
-              <ListItemIcon><AccountCircleIcon /></ListItemIcon>
-              <ListItemText primary='About me' />
-            </ListItemButton>
-          </ListItem>
+          <ListItemButton>
+            <ListItemIcon><MailIcon /></ListItemIcon>
+            <ListItemText primary='Contact' />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
+        <ListItem key='About me' disablePadding>
+          <ListItemButton>
+            <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+            <ListItemText primary='About me' />
+          </ListItemButton>
+        </ListItem>
+        <Divider />
       </List>
     </Box>
   );
